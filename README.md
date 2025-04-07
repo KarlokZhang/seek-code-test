@@ -28,6 +28,12 @@ This solution was built within a limited timeframe and with practical real-world
 - ESLint and Prettier for code quality
 - Husky for git hooks
 
+## 📝 Code Quality
+
+- ESLint is configured for code linting
+- Prettier is used for code formatting
+- Husky is set up for pre-commit hooks
+
 ## 📋 Prerequisites
 
 - Node.js (Latest LTS version recommended)
@@ -38,8 +44,8 @@ This solution was built within a limited timeframe and with practical real-world
 1. Clone the repository:
 
 ```bash
-git clone <repository-url>
-cd seek-test
+git clone https://github.com/KarlokZhang/seek-code-test.git
+cd seek-code-test
 ```
 
 2. Install dependencies:
@@ -93,8 +99,12 @@ I have follow [Kent C. Dodds' Testing Trophy](https://kentcdodds.com/blog/the-te
 - Unit tests are located in `src/test/`
 - E2E tests are located in `src/test/playwright/end2end`
 
-## 📝 Code Quality
+### Test Results
 
-- ESLint is configured for code linting
-- Prettier is used for code formatting
-- Husky is set up for pre-commit hooks
+![Unit Test](./public/screenshots/unitTestResult.png)
+
+![e2e Test](./public/screenshots/e2eTestResult.png)
+
+## 📸 UI Screenshots
+
+![UI](./public/screenshots/ui.png)
