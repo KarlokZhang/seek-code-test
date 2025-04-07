@@ -91,7 +91,7 @@ I have follow [Kent C. Dodds' Testing Trophy](https://kentcdodds.com/blog/the-te
 > The focus was on reliability, isolation, and coverage while maintaining speed and developer ergonomics.
 
 - Unit tests are located in `src/test/`
-- E2E tests are located in `test/`
+- E2E tests are located in `src/test/playwright/end2end`
 
 ## 📝 Code Quality
 

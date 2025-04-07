@@ -28,5 +28,5 @@
             "@/*": ["src/*"]
         }
     },
-    "include": ["src", "src/test"]
+    "include": ["src", "src/test", "src/test/playwright"]
 }

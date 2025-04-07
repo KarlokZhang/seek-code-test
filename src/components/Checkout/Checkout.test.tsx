@@ -8,7 +8,7 @@ import { Checkout } from './Checkout';
 import { CheckoutProps } from './Checkout.types';
 
 jest.mock('@/hooks/useAsync');
-jest.mock('@/api/products');
+jest.mock('@/api/fetchProducts');
 
 const mockUseAsync = useAsync as jest.MockedFunction<typeof useAsync>;
 const mockFetchProducts = fetchProducts as jest.MockedFunction<typeof fetchProducts>;
