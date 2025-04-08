@@ -19,13 +19,13 @@ const defaultProps: CheckoutProps = {
 
 const mockProducts = [
     {
-        code: 'classic',
+        code: 'CLASSIC',
         name: 'Classic Ad',
         description: 'Offers the most basic level of advertisement.',
         price: 269.99,
     },
     {
-        code: 'standout',
+        code: 'STANDOUT',
         name: 'Standout Ad',
         description: 'Allows advertisers to use a company logo and use a longer presentation text.',
         price: 322.99,

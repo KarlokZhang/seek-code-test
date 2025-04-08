@@ -13,19 +13,19 @@ describe('fetchProducts', () => {
     it('should fetch all available products', async () => {
         const expectedProducts: Product[] = [
             {
-                code: 'classic',
+                code: 'CLASSIC',
                 name: 'Test Product 1',
                 description: 'Test Description 1',
                 price: 10.99,
             },
             {
-                code: 'standout',
+                code: 'STANDOUT',
                 name: 'Test Product 2',
                 description: 'Test Description 2',
                 price: 20.99,
             },
             {
-                code: 'premium',
+                code: 'PREMIUM',
                 name: 'Test Product 3',
                 description: 'Test Description 3',
                 price: 30.99,

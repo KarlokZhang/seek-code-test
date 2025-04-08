@@ -16,7 +16,7 @@ describe('fetchCustomerPricingRule', () => {
         const customerCode: CustomerCode = 'axilCoffeeRoasters';
         const expectedRules: Discount[] = [
             {
-                productCode: 'standout',
+                productCode: 'STANDOUT',
                 type: DISCOUNT_TYPE.SPECIAL_PRICE_DISCOUNT,
                 specialPrice: 299.99,
             },
@@ -32,13 +32,13 @@ describe('fetchCustomerPricingRule', () => {
         const customerCode: CustomerCode = 'myer';
         const expectedRules: Discount[] = [
             {
-                productCode: 'standout',
+                productCode: 'STANDOUT',
                 type: DISCOUNT_TYPE.X_FOR_Y_DISCOUNT,
                 x: 5,
                 y: 4,
             },
             {
-                productCode: 'premium',
+                productCode: 'PREMIUM',
                 type: DISCOUNT_TYPE.SPECIAL_PRICE_DISCOUNT,
                 specialPrice: 389.99,
             },

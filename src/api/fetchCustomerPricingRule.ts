@@ -5,10 +5,10 @@ import { PricingRulesConfig } from '@/types/pricingRule.types';
 import { logger } from '@/utils/logger/logger';
 
 const PRICING_RULES_CONFIG: PricingRulesConfig = {
-    axilCoffeeRoasters: [{ productCode: 'standout', type: DISCOUNT_TYPE.SPECIAL_PRICE_DISCOUNT, specialPrice: 299.99 }],
+    axilCoffeeRoasters: [{ productCode: 'STANDOUT', type: DISCOUNT_TYPE.SPECIAL_PRICE_DISCOUNT, specialPrice: 299.99 }],
     secondBite: [
         {
-            productCode: 'classic',
+            productCode: 'CLASSIC',
             type: DISCOUNT_TYPE.X_FOR_Y_DISCOUNT,
             x: 3,
             y: 2,
@@ -16,13 +16,13 @@ const PRICING_RULES_CONFIG: PricingRulesConfig = {
     ],
     myer: [
         {
-            productCode: 'standout',
+            productCode: 'STANDOUT',
             type: DISCOUNT_TYPE.X_FOR_Y_DISCOUNT,
             x: 5,
             y: 4,
         },
         {
-            productCode: 'premium',
+            productCode: 'PREMIUM',
             type: DISCOUNT_TYPE.SPECIAL_PRICE_DISCOUNT,
             specialPrice: 389.99,
         },
