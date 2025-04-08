@@ -8,14 +8,14 @@ describe('getDiscountMessage', () => {
         const discount = { type: DISCOUNT_TYPE.SPECIAL_PRICE_DISCOUNT, specialPrice: 10 };
         const message = getDiscountMessage(discount as Discount);
 
-        expect(message).toBe('Discount: Special price $10.00');
+        expect(message).toBe(`Discount: Special price $${discount.specialPrice.toFixed(2)}`);
     });
 
     it('should return the correct message for a x for y discount', () => {
         const discount = { type: DISCOUNT_TYPE.X_FOR_Y_DISCOUNT, x: 2, y: 1 };
         const message = getDiscountMessage(discount as Discount);
 
-        expect(message).toBe('Discount: Buy 2, pay for 1');
+        expect(message).toBe(`Discount: Buy ${discount.x}, pay for ${discount.y}`);
     });
 
     it('should return null for an unknown discount type', () => {
