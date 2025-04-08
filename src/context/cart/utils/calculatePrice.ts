@@ -56,19 +56,21 @@ export const getPriceSummaryForProduct = (
 ): { subTotalPrice: number; subSavedPrice: number } => {
     const fullPrice = quantity * product.price;
 
+    const priceWithoutDiscount = { subTotalPrice: fullPrice, subSavedPrice: 0 };
+
     if (!discount) {
-        return { subTotalPrice: fullPrice, subSavedPrice: 0 };
+        return priceWithoutDiscount;
     }
 
     switch (discount.type) {
         case DISCOUNT_TYPE.X_FOR_Y_DISCOUNT: {
             if (discount.y > discount.x) {
                 logger.error(`Discount ${discount.type} is invalid, X should be greater than Y`);
-                return { subTotalPrice: fullPrice, subSavedPrice: 0 };
+                return priceWithoutDiscount;
             }
 
             if (quantity < discount.x) {
-                return { subTotalPrice: fullPrice, subSavedPrice: 0 };
+                return priceWithoutDiscount;
             }
 
             const sets = Math.floor(quantity / discount.x);
@@ -89,6 +91,6 @@ export const getPriceSummaryForProduct = (
             };
         default:
             logger.warn('Unknown discount type encountered');
-            return { subTotalPrice: fullPrice, subSavedPrice: 0 };
+            return priceWithoutDiscount;
     }
 };
