@@ -1,6 +1,7 @@
 import { DISCOUNT_TYPE } from '@/constants/discount';
 import { CustomerCode } from '@/types/customer.types';
-import { PricingRule, PricingRulesConfig } from '@/types/pricingRule.types';
+import { Discount } from '@/types/discount.types';
+import { PricingRulesConfig } from '@/types/pricingRule.types';
 import { logger } from '@/utils/logger/logger';
 
 const PRICING_RULES_CONFIG: PricingRulesConfig = {
@@ -29,7 +30,7 @@ const PRICING_RULES_CONFIG: PricingRulesConfig = {
     default: [],
 };
 
-export const fetchCustomerPricingRule = (customerCode: CustomerCode): Promise<PricingRule[]> => {
+export const fetchCustomerPricingRule = (customerCode: CustomerCode): Promise<Discount[]> => {
     return new Promise((resolve, reject) => {
         if (!Object.keys(PRICING_RULES_CONFIG).includes(customerCode)) {
             reject(new Error(`Customer code ${customerCode} not found`));

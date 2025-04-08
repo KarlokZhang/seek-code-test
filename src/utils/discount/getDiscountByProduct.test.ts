@@ -1,11 +1,10 @@
 import { DISCOUNT_TYPE } from '@/constants';
 import { PRODUCT_CODE } from '@/constants';
-import { SPECIAL_PRICE_DISCOUNT, X_FOR_Y_DISCOUNT } from '@/types/discount.types';
-import { PricingRule } from '@/types/pricingRule.types';
+import { Discount, SPECIAL_PRICE_DISCOUNT, X_FOR_Y_DISCOUNT } from '@/types/discount.types';
 
 import { getDiscountByProduct } from './getDiscountByProduct';
 
-const mockPricingRules: PricingRule[] = [];
+const mockPricingRules: Discount[] = [];
 
 describe('getDiscountByProduct', () => {
     it('should return null if there is no discount for the product', () => {
@@ -21,7 +20,7 @@ describe('getDiscountByProduct', () => {
     });
 
     it('should return the correct discount for a product', () => {
-        const mockDiscountForClassicProduct: PricingRule[] = [
+        const mockDiscountForClassicProduct: Discount[] = [
             {
                 productCode: PRODUCT_CODE.CLASSIC,
                 type: DISCOUNT_TYPE.X_FOR_Y_DISCOUNT,

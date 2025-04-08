@@ -1,6 +1,6 @@
 import { DISCOUNT_TYPE } from '@/constants/discount';
 import { CustomerCode } from '@/types/customer.types';
-import { PricingRule } from '@/types/pricingRule.types';
+import { Discount } from '@/types/discount.types';
 
 import { fetchCustomerPricingRule } from './fetchCustomerPricingRule';
 
@@ -14,7 +14,7 @@ describe('fetchCustomerPricingRule', () => {
 
     it('should fetch the correct pricing rules for customer', async () => {
         const customerCode: CustomerCode = 'axilCoffeeRoasters';
-        const expectedRules: PricingRule[] = [
+        const expectedRules: Discount[] = [
             {
                 productCode: 'standout',
                 type: DISCOUNT_TYPE.SPECIAL_PRICE_DISCOUNT,
@@ -30,7 +30,7 @@ describe('fetchCustomerPricingRule', () => {
 
     it('should fetch all pricing rules for customer when it has multiple rules', async () => {
         const customerCode: CustomerCode = 'myer';
-        const expectedRules: PricingRule[] = [
+        const expectedRules: Discount[] = [
             {
                 productCode: 'standout',
                 type: DISCOUNT_TYPE.X_FOR_Y_DISCOUNT,
@@ -52,7 +52,7 @@ describe('fetchCustomerPricingRule', () => {
 
     it('should return empty pricing rules for default customer', async () => {
         const customerCode: CustomerCode = 'default';
-        const expectedRules: PricingRule[] = [];
+        const expectedRules: Discount[] = [];
 
         mockFetchCustomerPricingRule.mockResolvedValue(expectedRules);
 
